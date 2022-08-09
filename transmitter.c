@@ -59,13 +59,20 @@ int main(int argc, char const* argv[])
 
     while (1) 
 	{
-        data = rand() % 2000;
+		if((rand() % 5) < 2)
+		{
+			data = - rand() % 2000;
+		}
+        else
+		{
+			data = rand() % 2000;
+		}
         printf("Num = %+09.3f\n", data);
         sprintf(str_data, "%+09.3f", data);
         printf("Str = %s\n",str_data);
         printf("Len = %d\n\n", strlen(str_data));
         send(new_socket, str_data, strlen(str_data), 0);
-        sleep(1);
+        sleep(0.5);
     }
 	
     // closing the connected socket
