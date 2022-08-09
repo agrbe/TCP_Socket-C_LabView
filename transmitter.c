@@ -45,7 +45,8 @@ int main(int argc, char const* argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	if (listen(server_fd, 3) < 0) {
+	if (listen(server_fd, 3) < 0) 
+	{
 		perror("listen");
 		exit(EXIT_FAILURE);
 	}
@@ -56,7 +57,8 @@ int main(int argc, char const* argv[])
 		exit(EXIT_FAILURE);
 	}
 
-    while (1) {
+    while (1) 
+	{
         data = rand() % 2000;
         printf("Num = %+09.3f\n", data);
         sprintf(str_data, "%+09.3f", data);
