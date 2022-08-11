@@ -13,12 +13,12 @@ int main(int argc, char const* argv[])
     double data = 0;
 	char str_data[10];
 
+	srand(time(NULL));
+
 	int server_fd, new_socket, valread;
 	struct sockaddr_in address;
 	int opt = 1;
 	int addrlen = sizeof(address);
-
-    srand(time(NULL));
 
 	// creating socket file descriptor
 	if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) 
