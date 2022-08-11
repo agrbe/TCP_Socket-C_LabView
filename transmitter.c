@@ -72,7 +72,7 @@ int main(int argc, char const* argv[])
         printf("Str = %s\n",str_data);
         printf("Len = %d\n\n", strlen(str_data));
         send(new_socket, str_data, strlen(str_data), 0);
-        sleep(0.5);
+        sleep(1);
     }
 	
     // closing the connected socket
